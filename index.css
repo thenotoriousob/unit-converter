@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body, input {
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+input {
+    font-size: 52px;
+    border: 2px solid #B295FF;
+    padding: 15px;
+}
+
+input, button {
+    width: 125px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Remove the spin buttons from the number input */
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input, .hero {
+    background: #6943FF;
+}
+
+button {
+    display: block;
+    margin: 25px auto;
+    background: #FFFFFF;
+    border: 0;
+    color: #3D3D3D;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h1 {
+    margin: 20px auto 30px;
+    font-size: 28px;
+}
+
+h3 {
+    margin: 0;
+    color: #CCC1FF;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 14px;
+    height: 14px;
+}
+
+.container {
+    width: 100%;
+    background: #1F2937;
+}
+
+.hero {
+    /* To fix the collapsing margin */
+    border: 1px solid #6943FF;
+    padding-top: 30px;
+}
+
+.conversion-card {
+    background: #273549;
+    padding: 30px 50px 15px 50px;
+    margin: 25px auto;
+    width: 90%;
+    border-radius: 5px;
+}
+
