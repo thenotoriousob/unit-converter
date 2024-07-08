@@ -19,6 +19,8 @@ convertBtn.addEventListener("click", function() {
     massEl.textContent = convertMass(unitsEl.value);
 });
 
+unitsEl.addEventListener('input', resizeInputField);
+
 function convertLength(length) {
 
     if (!Number(length)) {
@@ -71,4 +73,10 @@ function convertPoundsToKilos(mass) {
 
 function buildConversionString(units, metric, metricvalue, imperial, imperialvalue) {
     return `${units} ${metric} = ${metricvalue.toFixed(3)} ${imperial} | ${units} ${imperial} = ${imperialvalue.toFixed(3)} ${metric}`;
+}
+
+function resizeInputField() {
+    if (unitsEl.value.length < 7) {
+        this.style.width = ++unitsEl.value.length + 'ch'  
+    }
 }
