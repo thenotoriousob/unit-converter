@@ -10,15 +10,16 @@
     <body>
         <div class="container">
             <div class="hero">
-                <h1>Metric/Imperial Unit Conversion</h1>
+                <!-- Added nobr tags to keep "Unit Conversion" together -->
+                <h1>Metric/Imperial <nobr>Unit Conversion</nobr></h1>
                 <input type="text" id="units" maxlength="6">
                 <button id="convert-btn">Convert</button>
             </div>
-            <div class="conversion-card">
+            <div class="conversion-card first-card">
                 <h3>Length (Meter/Feet)</h3>
                 <p id="length"></p>
             </div>
-            <div class="conversion-card">
+            <div class="conversion-card last-card">
                 <h3>Volume (Liters/Gallons)</h3>
                 <p id="volume"></p>
             </div>

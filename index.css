@@ -1,17 +1,25 @@
 *,
 *::before,
 *::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0 auto;
-    width: 40%;
+    /* 
+        REV: suggest you do not set body width or margin
+        but instead set container the width and margin.
+        Note that I opted to use a default width of 100%.
+    */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+
+    /*  Was used to center the content vertically but not needed in this project
+        justify-content: center;
+        height: 100vh;
+    */
 }
 
 body, input {
@@ -24,21 +32,15 @@ input {
     font-size: 52px;
     border: 2px solid #B295FF;
     padding: 15px;
-    /* field-sizing: content; */
+    /* Added this to adjust the size of the field but not supported in all browsers
+      field-sizing: content;
+    */
 }
 
 input, button {
     width: 125px;
-    /* max-width: 500px; */
     font-weight: bold;
     border-radius: 4px;
-}
-
-/* Remove the spin buttons from the number input */
-input[type='number']::-webkit-inner-spin-button, 
-input[type='number']::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    margin: 0;
 }
 
 input, .hero {
@@ -60,7 +62,8 @@ button:hover {
 }
 
 h1 {
-    margin: 20px auto 30px;
+    /* Changed left/right margin so that the title won't touch the container */
+    margin: 20px 50px 30px;
     font-size: 28px;
 }
 
@@ -72,11 +75,19 @@ h3 {
 p {
     margin: 10px 0;
     font-size: 14px;
-    height: 14px;
+
+    /* Changed height to line-height this means the element adjusts in 
+       height when more than 1 line, height means it would overflow the element */
+    line-height: 14px;
 }
 
 .container {
-    width: 100%;
+    /* Better to set the container's min-width and auto center margins. Removing the %
+       stops the container and its contents getting really small when 
+       adjusting the size of the screen */
+    /* width: 100%; */
+    min-width: 350px;
+    max-width: 550px;
     background: #1F2937;
 }
 
@@ -87,10 +98,26 @@ p {
 }
 
 .conversion-card {
+    /* Changed width to used max/min widths for responsive UI */
+    /* width: 90%; */
+    max-width: 500px;
+    min-width: 330px;
+
+    /* Made margin consistent on all sides */
+    margin: 25px;
+
+    /* adjusted left/right padding */
+    padding: 30px 5px 15px 5px;
+    
     background: #273549;
-    padding: 30px 50px 15px 50px;
-    margin: 25px auto;
-    width: 90%;
     border-radius: 5px;
 }
 
+/* Added from review */
+.first-card {
+  margin-top: 30px;
+}
+
+.last-card {
+  margin-bottom: 30px;
+}
